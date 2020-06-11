@@ -5,7 +5,7 @@
 <head>
 <body>
 <div class="registerbox">
-    <img src="user.png" class="avatar">
+    <img src="image/user.png" class="avatar">
 
 <div class="container">
     <div class="row justify-content-center">
