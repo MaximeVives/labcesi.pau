@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url();
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.registerbox{
+    width: 370px;
+    height: 480px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 0 1%;
+}
+
+.registerbox input{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.registerbox input[type="text"], input[type="email"],input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40 px;
+    color: hsla(39,100%,66%,1);
+    font-size: 16px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: calc(50% - 50px);
+}
+
+.titre{
+    margin: 0;
+    margin-top:50px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.sous-partie{
+    color: hsla(39,100%,66%,1);
+}
+.bouton{
+    border: none;
+    outline: none;
+    height: 40px;
+    background:#000 ;
+    color: hsla(39,100%,66%,1);
+    font-size: 18px;
+    margin:0% 35% 0%;
+}
