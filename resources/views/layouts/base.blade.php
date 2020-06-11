@@ -9,6 +9,7 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="css/style.css">
+    @yield('currentpage-css')
 
     <script src="https://kit.fontawesome.com/fb3e250c04.js" crossorigin="anonymous"></script>
 </head>
@@ -60,7 +61,9 @@
         <div class="navbar">
             <!-- Use any element to open the sidenav -->
             <span class="menu" onclick="openNav()"><i class="fas fa-bars"></i></span>
-            <div class="spacer"></div>
+            <div class="cart">
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
             <?php
                 if (!(Auth::check())) {
             ?>
@@ -74,7 +77,7 @@
             else{
                 ?>
             <div class="connected">
-                <p><a href="/logout">Disconnect</a></p><br>
+                <a class="logout" href="/logout">Déconnecter</a>
                 <p>Bonjour <span class="name_connected"><?php echo(Auth::user()->firstname);?></span></p>
             </div>
                 <?php
@@ -92,7 +95,7 @@
     <script lang="javascript">
         /* Set the width of the side navigation to 250px */
         function openNav() {
-            document.getElementById("mySidenav").style.width = "350px";
+            document.getElementById("mySidenav").style.width = "325px";
             document.body.style.backgroundImage = "url('../image/background_darker.jpg')";
         }
 

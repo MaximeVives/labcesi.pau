@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    color: var(--noir-cesi)
 }
 
 :root{
@@ -61,14 +62,15 @@ body{
 
 .navbar{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 65% 15%;
     justify-content: center;
     align-items: center;
+    min-height: 60px;
 }
 
 .menu i{
     font-size: 24px;
-    margin: 25px 0 0 50px;
+    margin-left: 50px;
 }
 
 
@@ -124,12 +126,33 @@ body{
     text-decoration: none;
 }
 
+.connected{
+    /* margin: 20px 0; */
+    display: grid;
+    grid-template-rows: 60% 40%;
+    height: 100%;
+    justify-content: center
+}
+
+.logout{
+    margin: 10px 0 0 0;
+    text-decoration: none;
+    color: var(--jaune-cesi);
+    font-weight: 900;
+}
+
+.cart{
+    text-align: right;
+    padding: 0 20px;
+}
+.cart i{font-size: 32px;}
+
 /* main{
 
 } */
 
 main h1{
-    margin-top: 80px;
+    margin-top: 30px;
     text-align: center;
     font-size: 80px;
     color: #fff;
