@@ -22,7 +22,22 @@
                 <div class="navigate">
                     <a href="#">Accueil</a>
                     <a href="#">Produits</a>
-                    <a href="#">Administrateurs</a>
+                    {{-- ================ --}}
+                    <?php
+                        if (!(Auth::check())) {
+                        }
+                        elseif ((Auth::check()) && (Auth::user()->admin == 1)) {
+                            ?>
+                    <a href="#">Administration</a>
+                    <?php
+                        }
+                        else {
+                            ?>
+                            <a href="#">Panier</a>
+                        <?php
+                        }
+                    ?>
+                    {{-- ================ --}}
                     <a href="#">Sponsors</a>
                 </div>
                 
