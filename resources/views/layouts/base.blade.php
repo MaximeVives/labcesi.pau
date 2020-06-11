@@ -33,7 +33,7 @@
                         }
                         else {
                             ?>
-                            <a href="#">Panier</a>
+                            <a href="#">Mes commandes</a>
                         <?php
                         }
                     ?>
