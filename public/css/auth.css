@@ -31,7 +31,7 @@ body{
     background: transparent;
     outline: none;
     height: 40 px;
-    color: hsla(39,100%,66%,1);
+    color: var(--jaune-cesi);
     font-size: 16px;
 }
 
@@ -54,14 +54,14 @@ body{
 }
 
 .sous-partie{
-    color: hsla(39,100%,66%,1);
+    color: var(--jaune-cesi);
 }
 .bouton{
     border: none;
     outline: none;
     height: 40px;
     background:#000 ;
-    color: hsla(39,100%,66%,1);
+    color: var(--jaune-cesi);
     font-size: 18px;
     margin:0% 35% 0%;
 }
