@@ -7,3 +7,11 @@ Labcesi permet aux entreprises, aux particuliers ou encore aux personnels soigna
 @section('title')
     labcesi.pau.fr
 @endsection
+
+@section('page-title')
+    LABCESI
+@endsection
+
+@section('content')
+    
+@endsection

@@ -69,8 +69,10 @@
         
         
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <h1>@yield('page-title')</h1>
+        @yield('content')
+    </main>
 
     <script lang="javascript">
         /* Set the width of the side navigation to 250px */
