@@ -1,15 +1,6 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url();
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-}
 .registerbox{
-    width: 350px;
-    height: 450px;
-    background: #000;
+    width: 400px;
+    background: var(--noir-cesi);
     color: #fff;
     top: 50%;
     left: 50%;
@@ -17,6 +8,10 @@ body{
     transform: translate(-50%,-50%);
     box-sizing: border-box;
     padding: 0 1%;
+}
+
+.form-group{
+    margin: 8px 5px;
 }
 
 .registerbox input{
@@ -30,8 +25,9 @@ body{
     border-bottom: 1px solid #fff;
     background: transparent;
     outline: none;
-    height: 40 px;
-    color: hsla(39,100%,66%,1);
+    height: 40px;
+    color: white;
+    /* color: var(--jaune-cesi); */
     font-size: 16px;
 }
 
@@ -50,24 +46,42 @@ body{
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
+    color: #fff;
+}
 
-}
 .sous-partie{
-    color: hsla(39,100%,66%,1);
+    color: var(--jaune-cesi);
 }
+
 .bouton{
     border: none;
     outline: none;
     height: 40px;
-    background:#000 ;
-    color: hsla(39,100%,66%,1);
+    width: 60%;
+    margin: 20px 0 0;
+    background-color: var(--jaune-cesi) ;
+    color: var(--noir-cesi);
     font-size: 18px;
-    margin:0% 35% 0%;
+    border-radius: 5px;
 }
-.forgot
-{
-    display: flex;
-    margin:0% 20% 0%;
-    position: absolute;
 
+.center-bouton{
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+} 
+
+.statut-roll{
+    outline: none;
+    background-color: transparent;
+    color: white;
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 0 0 8px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    border: 0;
+    border-bottom: solid 2px var(--jaune-cesi);
 }
