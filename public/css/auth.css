@@ -36,9 +36,10 @@
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: -10%;
+    top: -55px;
     left: calc(50% - 50px);
 }
+
 
 .titre{
     margin: 0;
@@ -84,4 +85,15 @@
     cursor: pointer;
     border: 0;
     border-bottom: solid 2px var(--jaune-cesi);
+}
+
+
+.registerbox .forgot{
+    width: 10%;
+    color: white;
+    /* color: var(--jaune-cesi); */
+}
+.rememberMe{
+    color: var(--jaune-cesi);
+    width: 10%;
 }
