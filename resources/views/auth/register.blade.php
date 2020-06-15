@@ -30,6 +30,7 @@
                                 @enderror
                             </div>
                         </div>
+                        
 
                         <div class="form-group row">
                             <label for="lastname" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Nom') }}</label>
@@ -81,6 +82,8 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Re-entrer votre mot de passe" required autocomplete="new-password" >
                             </div>
                         </div>
+
+
 
                         <div class="form-group row">
                             <label for="ID_type" class="col-md-4 col-form-label text-md- sous-partie">{{ __('Statut') }}</label>

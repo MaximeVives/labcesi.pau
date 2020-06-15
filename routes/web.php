@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'mainController@home');
+Route::get('/condition', 'mentionController@mention');
+Route::get('/vente', 'mentionController@vente');
+
 
 Auth::routes();
+
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+
