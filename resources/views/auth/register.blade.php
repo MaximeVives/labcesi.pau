@@ -25,7 +25,7 @@
 
                                 @error('firstname')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    <br/><strong style="color: #e24c3d">{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -39,7 +39,7 @@
 
                                 @error('lastname')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    <br/><strong style="color: #e24c3d">{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -53,8 +53,8 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Entrer votre adresse mail" value="{{ old('email') }}" required autocomplete="email" >
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    <span class="invalid-feedback" role="alert" >
+                                        <br/><strong style="color: #e24c3d">{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -68,7 +68,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    <br/><strong style="color: #e24c3d">{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -95,7 +95,7 @@
                                 </select>
                                 @error('ID_type')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                    <br/><strong style="color: #e24c3d">{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>

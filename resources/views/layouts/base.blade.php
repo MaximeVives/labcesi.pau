@@ -46,8 +46,8 @@
                 <div class="nav-footer">
                     <div class="left-part">
                         <a href="#">Mentions légales</a>
-                        <a href="#">Conditions d'utilisations</a>
-                        <a href="#">Conditions de ventes</a>
+                        <a href="/condition">Conditions d'utilisations</a>
+                        <a href="/vente">Conditions de ventes</a>
                         <a href="#">Crédits</a>
                     </div>
                     <div class="right-part">

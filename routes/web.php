@@ -17,5 +17,8 @@ Route::get('/', 'mainController@home');
 Route::get('/products', 'mainController@products');
 Route::get('/sponsors', 'mainController@sponsors');
 
+Route::get('/condition', 'mentionController@mention');
+Route::get('/vente', 'mentionController@vente');
+
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
