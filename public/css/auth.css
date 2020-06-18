@@ -1,0 +1,99 @@
+.registerbox{
+    width: 400px;
+    background: var(--noir-cesi);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 0 1%;
+}
+
+.form-group{
+    margin: 8px 5px;
+}
+
+.registerbox input{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.registerbox input[type="text"], input[type="email"],input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    /* color: var(--jaune-cesi); */
+    font-size: 16px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -55px;
+    left: calc(50% - 50px);
+}
+
+
+.titre{
+    margin: 0;
+    margin-top:50px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+.sous-partie{
+    color: var(--jaune-cesi);
+}
+
+.bouton{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 60%;
+    margin: 20px 0 0;
+    background-color: var(--jaune-cesi) ;
+    color: var(--noir-cesi);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.center-bouton{
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+} 
+
+.statut-roll{
+    outline: none;
+    background-color: transparent;
+    color: white;
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 0 0 8px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    border: 0;
+    border-bottom: solid 2px var(--jaune-cesi);
+}
+
+
+.registerbox .forgot{
+    width: 10%;
+    color: white;
+    /* color: var(--jaune-cesi); */
+}
+.rememberMe{
+    color: var(--jaune-cesi);
+    width: 10%;
+}

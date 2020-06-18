@@ -21,8 +21,8 @@
             <div class="lign-grid">
                 <p class="center_logo"><img class="logo" src="image/logo_LabCESI.png" alt=""></p>
                 <div class="navigate">
-                    <a href="#">Accueil</a>
-                    <a href="#">Produits</a>
+                    <a href="/">Accueil</a>
+                    <a href="/products">Produits</a>
                     {{-- ================ --}}
                     <?php
                         if (!(Auth::check())) {
@@ -39,15 +39,15 @@
                         }
                     ?>
                     {{-- ================ --}}
-                    <a href="#">Sponsors</a>
+                    <a href="/sponsors">Sponsors</a>
                 </div>
                 
 
                 <div class="nav-footer">
                     <div class="left-part">
                         <a href="#">Mentions légales</a>
-                        <a href="#">Conditions d'utilisations</a>
-                        <a href="#">Conditions de ventes</a>
+                        <a href="/condition">Conditions d'utilisations</a>
+                        <a href="/vente">Conditions de ventes</a>
                         <a href="#">Crédits</a>
                     </div>
                     <div class="right-part">
@@ -61,12 +61,12 @@
         <div class="navbar">
             <!-- Use any element to open the sidenav -->
             <span class="menu" onclick="openNav()"><i class="fas fa-bars"></i></span>
-            <div class="cart">
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
             <?php
                 if (!(Auth::check())) {
             ?>
+            <div class="nothing">
+                {{-- <a href=""><i class="fas fa-shopping-cart"></i></a> --}}
+            </div>
             <div class="nav-auth">
                 <a href="/login">Se Connecter</a>
                 <span>|</span>
@@ -76,6 +76,9 @@
             }
             else{
                 ?>
+            <div class="cart">
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
             <div class="connected">
                 <a class="logout" href="/logout">Déconnecter</a>
                 <p>Bonjour <span class="name_connected"><?php echo(Auth::user()->firstname);?></span></p>
@@ -106,5 +109,8 @@
         }
 
     </script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script> --}}
 </body>
 </html>
