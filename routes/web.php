@@ -18,9 +18,9 @@ Route::get('/products', 'mainController@products');
 Route::get('/sponsors', 'mainController@sponsors');
 Route::get('/condition', 'mentionController@mention');
 Route::get('/vente', 'mentionController@vente');
+Route::get('/{n}', 'mainController@fiche_tech')->where('n', '[1-9]');
 
-Route::get('/condition', 'mentionController@mention');
-Route::get('/vente', 'mentionController@vente');
+Route::get('/admi', 'admiController@admi');
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');

@@ -1,0 +1,109 @@
+/* Conteneur fiche technique */
+.prod-content{
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/* Image à gauche */
+.prod-fiche-left{
+    margin: auto;
+    /* height: 800px; */
+    /* min-width: 550px; */
+}
+
+.prod-fiche-left img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Texte à droite */
+.prod-fiche-right{
+    margin: auto;
+}
+
+/* Nom Produit */
+.prod-fiche-title{
+    margin: 0 0 15px 0;
+}
+
+.prod-fiche-title h3{
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+}
+
+/* Description */
+.prod-fiche-descr{
+    margin: 15px auto;
+    width: 60%;
+}
+
+.prod-fiche-descr p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+/* formulaire couleur-quantité-ajouter au panier */
+form{
+    margin: 15px 0;
+}
+
+/* couleur-qt */
+.prod-fiche-detail{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Select box design */
+select{
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 20px;
+    background-color: var(--noir-cesi);
+    border: 1px solid#fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select:focus,
+select:hover{
+    outline: none;
+    border: 1px solid var(--jaune-cesi);
+}
+
+select option {
+    color: white;
+}
+
+
+/* Bouton design */
+.prod-fiche-addcart{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0;
+}
+
+input[type="submit"]{
+    background-color: var(--noir-cesi);
+    color: #fff;
+    width: 240px;
+    height: 80px;
+    border: 1px solid var(--jaune-cesi);
+    font-size: 20px;
+    border-radius: 5px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+input[type="submit"]:focus{
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: var(--jaune-cesi);
+    cursor: pointer;
+}

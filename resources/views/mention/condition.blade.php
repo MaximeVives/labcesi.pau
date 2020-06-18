@@ -72,7 +72,7 @@
 <div class="text-center" id="haut">
 
   <a href="{{ url('#haut') }}">
-    <button type="button" class="btn btn-primary" style=" 
+    <button type="button" class="btn btn-primary" style="
     border: none;
     outline: none;
     height: 40%;
@@ -82,7 +82,7 @@
     font-size: 18px;
     margin: 20px 50% 0;
     border-radius: 5px">
-      Retourner en haut de la page 
+      Retourner en haut de la page
     </button>
   </a>
 

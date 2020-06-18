@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
     color: var(--noir-cesi)
 }
@@ -16,7 +17,7 @@
 body{
     background-image: url("../image/background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     min-height: 100vh;
     /* background-position: center; */
 }
