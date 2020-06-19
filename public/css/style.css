@@ -121,8 +121,8 @@ body{
 
 .nav-auth a, .nav-auth span{
     color: var(--noir-cesi);
-    font-weight: 600;
-    font-size: 20px;
+    /* font-weight: 600; */
+    font-size: 18px;
     text-decoration: none;
 }
 

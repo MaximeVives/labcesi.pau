@@ -15,10 +15,4 @@ class mentionController extends Controller
         return view('mention/condition_de_vente');
     } 
 }
-class venteController extends Controller
-{
-    public function ventes()
-    {
-        return view('mention/condition_de_vente');
-    }  
-}
+
