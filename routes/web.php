@@ -16,11 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'mainController@home');
 Route::get('/products', 'mainController@products');
 Route::get('/sponsors', 'mainController@sponsors');
+
 Route::get('/condition', 'mentionController@mention');
 Route::get('/vente', 'mentionController@vente');
 Route::get('/{n}', 'mainController@fiche_tech')->where('n', '[1-9]');
 
 Route::get('/admi', 'admiController@admi');
+
+Route::get('/ajout_produit', 'admiController@ajout_Produit');
+Route::post('/ajout_produit', 'ProductController@store');
+
+Route::post('/envoie', 'ProductController@store');
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');

@@ -1,5 +1,5 @@
 .registerbox{
-    width: 400px;
+    width: 20%;
     background: var(--noir-cesi);
     color: #fff;
     top: 50%;
@@ -70,7 +70,7 @@
     display: flex;
     margin: 30px 0;
     justify-content: center;
-} 
+}
 
 .statut-roll{
     outline: none;
