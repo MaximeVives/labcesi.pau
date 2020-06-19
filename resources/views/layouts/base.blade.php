@@ -79,9 +79,9 @@
             <div class="cart">
                 <a href=""><i class="fas fa-shopping-cart"></i></a>
             </div>
-            <div class="connected">
-                <a class="logout" href="/logout">Déconnecter</a>
+            <div class="connected"> 
                 <p>Bonjour <span class="name_connected"><?php echo(Auth::user()->firstname);?></span></p>
+                <a class="logout" href="/logout">Déconnecter</a>
             </div>
                 <?php
             }
@@ -99,13 +99,11 @@
         /* Set the width of the side navigation to 250px */
         function openNav() {
             document.getElementById("mySidenav").style.width = "325px";
-            document.body.style.backgroundImage = "url('../image/background_darker.jpg')";
         }
 
         /* Set the width of the side navigation to 0 */
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-            document.body.style.backgroundImage = "url('../image/background.jpg')";
         }
 
     </script>

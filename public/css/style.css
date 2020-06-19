@@ -12,12 +12,14 @@
 :root{
     --jaune-cesi: rgba(255, 200, 69, 1);
     --noir-cesi: rgba(39, 37, 31, 1);
+    --blanc: #f8f8f8;
 }
 
 body{
-    background-image: url("../image/background.jpg");
+    /* background-image: url("../image/background.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: auto; */
+    background-color: var(--blanc);
     min-height: 100vh;
     /* background-position: center; */
 }
@@ -49,7 +51,7 @@ body{
 
 .nav-footer .right-part a, .nav-footer .left-part a{
     font-size: 15px;
-    color: #eee;
+    color: var(--blanc);
 }
 
 .nav-footer .right-part a:hover, .nav-footer .left-part a:hover{
@@ -63,7 +65,7 @@ body{
 
 .navbar{
     display: grid;
-    grid-template-columns: 20% 65% 15%;
+    grid-template-columns: 20% 70% 10%;
     justify-content: center;
     align-items: center;
     min-height: 60px;
@@ -83,10 +85,11 @@ body{
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #fff; /* Black*/
+    background-color: #fdfbfd; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    border-right: .5px solid #dadada;
 }
   
   /* The navigation menu links */
@@ -128,15 +131,15 @@ body{
 }
 
 .connected{
-    /* margin: 20px 0; */
+    margin: 20px 0 0;
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 40% 60%;
     height: 100%;
     justify-content: center
 }
 
 .logout{
-    margin: 10px 0 0 0;
+    margin: 0 0 0 10px;
     text-decoration: none;
     color: var(--jaune-cesi);
     font-weight: 900;
@@ -156,5 +159,5 @@ main h1{
     margin-top: 30px;
     text-align: center;
     font-size: 80px;
-    color: #fff;
+    color: var(--jaune-cesi);
 }
