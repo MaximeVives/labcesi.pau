@@ -27,18 +27,18 @@
 
 /* Nom Produit */
 .prod-fiche-title{
-    margin: 0 0 15px 0;
+    margin: 0 0 60px 0;
 }
 
 .prod-fiche-title h3{
-    color: #fff;
+    color: var(--jaune-cesi);
     font-size: 70px;
     text-align: center;
 }
 
 /* Description */
 .prod-fiche-descr{
-    margin: 15px auto;
+    margin: 35px auto;
     width: 60%;
 }
 
@@ -49,7 +49,7 @@
 
 /* formulaire couleur-quantité-ajouter au panier */
 form{
-    margin: 15px 0;
+    margin: 50px 0;
 }
 
 /* couleur-qt */
@@ -61,11 +61,13 @@ form{
 /* Select box design */
 select{
     padding: 8px 12px;
-    color: #fff;
+    color: var(--noir-cesi);
     font-size: 20px;
-    background-color: var(--noir-cesi);
-    border: 1px solid#fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--jaune-cesi);
     border-radius: 5px;
+    transition: .6s;
     cursor: pointer;
 }
 
@@ -73,10 +75,12 @@ select:focus,
 select:hover{
     outline: none;
     border: 1px solid var(--jaune-cesi);
+    background-color: var(--jaune-cesi);
 }
 
 select option {
     color: white;
+    background-color: var(--noir-cesi);
 }
 
 
@@ -88,8 +92,8 @@ select option {
 }
 
 input[type="submit"]{
-    background-color: var(--noir-cesi);
-    color: #fff;
+    background-color: transparent;
+    color: var(--noir-cesi);
     width: 240px;
     height: 80px;
     border: 1px solid var(--jaune-cesi);
