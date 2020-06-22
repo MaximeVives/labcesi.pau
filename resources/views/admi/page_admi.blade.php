@@ -16,42 +16,42 @@ $i=1;
 $j=1;
 while ($i <= $limite) {
     /* Sélection des donneés */
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $titre = $bdd->prepare('SELECT name_product FROM products WHERE ID_product = :variable');
     $titre->execute(array(":variable" => $j));
     $name_product = $titre->fetch();
     $titre->closeCursor();
 
 
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $quantity = $bdd->prepare('SELECT quantity FROM products WHERE ID_product = :variable');
     $quantity->execute(array(":variable" => $j));
     $Quantity = $quantity->fetch();
     $quantity->closeCursor();
 
 
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $description = $bdd->prepare('SELECT description FROM products WHERE ID_product = :variable');
     $description->execute(array(":variable" => $j));
     $Description = $description->fetch();
     $description->closeCursor();
 
 
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $url = $bdd->prepare('SELECT url_pic FROM products WHERE ID_product = :variable');
     $url->execute(array(":variable" => $j));
     $Url_pic = $url->fetch();
     $url->closeCursor();
 
 
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $color = $bdd->prepare('SELECT `name_color` FROM `colors` RIGHT JOIN  products ON products.ID_color  = colors.ID_color WHERE products.ID_product = :variable');
     $color->execute(array(":variable" => $j));
     $color_product = $color->fetch();
     $color->closeCursor();
 
 
-    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=application;charset=utf8', 'root', 'root');
     $materiau = $bdd->prepare('SELECT `name_material` FROM `materials` RIGHT JOIN  products ON products.ID_material  = materials.ID_material WHERE products.ID_product = :variable');
     $materiau->execute(array(":variable" => $j));
     $materials = $materiau->fetch();

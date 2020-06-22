@@ -97,3 +97,17 @@
     color: var(--jaune-cesi);
     width: 10%;
 }
+
+
+/* Class button plus gros que bouton pour la partie infos et pas auth */
+.button{
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 60%;
+    margin: 20px 0 0;
+    background-color: var(--jaune-cesi) ;
+    color: var(--noir-cesi);
+    font-size: 18px;
+    border-radius: 5px;
+}
