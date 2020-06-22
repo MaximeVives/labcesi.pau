@@ -28,13 +28,19 @@ Un problème avec votre compte Labcesi ? Vous pouvez venir modifier tout vos par
             <div class="encart"><a href="/mes-commandes">Mes commandes</a></div>
         </div>
         <div class="content-param" id="stop-cookies">
-            <div class="encart"><a href="/fin-cookies">Révoquer l'accord des cookies</a></div>
+            <div class="encart"><a href="/fin-cookies">Utilisation des cookies</a></div>
         </div>
     </div>
 
-    @if(session()->has('jsAlert'))
+    @if(session()->has('up'))
         <script lang="javascript">
             alert("Vos nouveaux paramètres ont bien été appliqués");
+        </script>
+    @endif 
+
+    @if(session()->has('export'))
+        <script lang="javascript">
+            alert("Le fichier a bien été téléchargé");
         </script>
     @endif 
 @endsection

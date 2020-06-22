@@ -19,7 +19,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
             <div class="lign-grid">
-                <p class="center_logo"><img class="logo" src="image/logo_LabCESI.png" alt=""></p>
+                <p class="center_logo"><img class="logo" src="image/logo_LabCESI.png" alt="logo LabCESI"></p>
                 <div class="navigate">
                     <a href="/">Accueil</a>
                     <a href="/products">Produits</a>
@@ -29,12 +29,12 @@
                         }
                         elseif ((Auth::check()) && (Auth::user()->admin == 1)) {
                             ?>
-                    <a href="#">Administration</a>
+                    <a href="/admi">Administration</a>
                     <?php
                         }
                         else {
                             ?>
-                            <a href="#">Mes commandes</a>
+                            <a href="/mes-commandes">Mes commandes</a>
                         <?php
                         }
                     ?>
@@ -97,7 +97,7 @@
         
     </header>
     <main>
-        <h1>@yield('page-title')</h1>
+        <div class="title"><a href="/"><img class="logo" src="image/logo_LabCESI.png" alt="logo LabCESI"></a></div>
         @yield('content')
     </main>
 

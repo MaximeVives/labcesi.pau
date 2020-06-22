@@ -32,7 +32,7 @@ class accountController extends Controller
         $utilisateur->save();
 
         $message = 'done';
-        return redirect('/myaccount')->with('jsAlert', $message);
+        return redirect('/myaccount')->with('up', $message);
     }
 
     public function supprData()
@@ -41,7 +41,7 @@ class accountController extends Controller
         $utilisateur->delete();
 
         $message = 'done';
-        return redirect('/')->with('jsAlert', $message);
+        return redirect('/')->with('suppr', $message);
     }
 
     public function exportData()
@@ -54,11 +54,13 @@ class accountController extends Controller
         $date_now = date('d-m-y_h_i_s');
 
         $file = strval("personalData".$date_now.".csv");
-        $file_path = strval(public_path()."".$file);
+        $file_path = strval(public_path().$file);
+        $content = "Prenom;"."Nom;"."E-mail;"."date de creation;"."\n".$firstname.";".$lastname.";".$email.";".$date_creation.";";
+        
+        Storage::disk("public")->deleteDirectory('temp');
+        Storage::makeDirectory('temp');
+        Storage::disk("public")->put('temp/'.$file, $content);
 
-        Storage::put($file, $file_path);
-
-        // dd(storage_path()."/app/public/".$file);
-        return Storage::download(strval(storage_path()."/app/".$file), $file);
+        return Storage::disk("public")->download('temp/'.$file, $file);
     }
 }

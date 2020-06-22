@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-title')
-    Condition d'utilisation
+    Condition d'utilisation - labcesi.pau.fr
 @endsection
 
 @section('content')

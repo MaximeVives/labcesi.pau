@@ -59,50 +59,31 @@ while ($i <= $limite) {
 
     ?>
     <div class="box">
-    <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-                <div class="card-header titre">
-                <?php
-                              echo ($name_product['name_product'].'<br />');
-
-                            ?>
-                </div>
-                <div class="form-group row">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card-header titre">
+                        <?php
+                            echo ($name_product['name_product'].'<br />');
+                        ?>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Quantité en stock : ') }}
-                            <?php
+                            <span class="value"><?php echo $Quantity['quantity'];?></span><br><br/>
+                        </label>
+                        <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Description du produit : ') }}
+                            <span class="value"><?php echo $Description['description'];?></span><br><br>
+                        </label>
 
-                              echo $Quantity['quantity']. '<br />';
-                            ?>
-                            <br/>
-                            </label>
-                            <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Description du produit : ') }}
-                            <?php
-                             echo $Description['description']. '<br /> <br/>';
+                        <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('url du produit : ') }}
+                            <span class="value"><?php echo $Url_pic['url_pic'];?></span><br/><br/>
+                        </label>
 
-
-                            ?>
-
-                            <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('url du produit : ') }}
-                            <?php
-                            echo $Url_pic['url_pic'];
-
-
-                            ?><br/><br/>
-
-                            <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('matériau : ') }}
-                            <?php
-                            echo $materials['name_material'];
-
-
-                            ?><br/><br/>
-
-                            <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('couleur disponible : ') }}
-                            <?php
-                            echo $color_product['name_color'];
-
-
-                            ?>
+                        <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('matériau : ') }}
+                            <span class="value"><?php echo $materials['name_material'];?></span><br/><br/>
+                        <label>
+                        <label class="col-md-4 col-form-label text-md-right sous-partie">{{ __('couleur disponible : ') }}
+                            <span class="value"><?php echo $color_product['name_color'];?></span><br/>
                         </label>
                     </div>
                      <div class="form-group row mb-0">
@@ -117,13 +98,12 @@ while ($i <= $limite) {
             </div>
         </div>
     </div>
-    </div>
     <?php
     $j++;
     $i++;
 }
 
 ?>
-<input type="image" class='plus' onclick="window.location.href='/ajout_produit'"src="image/plus.png">
+    <input type="image" class='plus' onclick="window.location.href='/ajout_produit'"src="image/plus.png">
 
     @endsection

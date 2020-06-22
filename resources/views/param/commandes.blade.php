@@ -8,12 +8,17 @@
 Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière cesi et stylet cesi sont nos seuls produits pour le moment...
 @endsection
 
+@section('page-title')
+    Mes commandes - labcesi.pau.fr
+@endsection
+
+
 @section('title')
-    Utilisation des cookies - labcesi.pau.fr
+    labcesi.pau.fr - Mes commandes
 @endsection
 
 @section('page-title')
-    Utilisation des cookies
+    PRODUITS
 @endsection
 
 @section('content')
