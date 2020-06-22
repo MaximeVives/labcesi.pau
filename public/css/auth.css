@@ -1,5 +1,5 @@
 .registerbox{
-    width: 400px;
+    width: 20%;
     background: var(--noir-cesi);
     color: #fff;
     top: 50%;
@@ -70,7 +70,7 @@
     display: flex;
     margin: 30px 0;
     justify-content: center;
-} 
+}
 
 .statut-roll{
     outline: none;
@@ -96,4 +96,18 @@
 .rememberMe{
     color: var(--jaune-cesi);
     width: 10%;
+}
+
+
+/* Class button plus gros que bouton pour la partie infos et pas auth */
+.button{
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 60%;
+    margin: 20px 0 0;
+    background-color: var(--jaune-cesi) ;
+    color: var(--noir-cesi);
+    font-size: 18px;
+    border-radius: 5px;
 }

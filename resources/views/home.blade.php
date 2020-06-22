@@ -13,5 +13,10 @@ Labcesi permet aux entreprises, aux particuliers ou encore aux personnels soigna
 @endsection
 
 @section('content')
-    
+
+    @if(session()->has('jsAlert'))
+    <script lang="javascript">
+        alert("Votre compte a été supprimé");
+    </script>
+    @endif
 @endsection

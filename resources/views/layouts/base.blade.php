@@ -52,7 +52,13 @@
                     </div>
                     <div class="right-part">
                         <a href="#">Cesi</a>
-                        <a href="#">A propos</a>
+                        <?php 
+                            if (Auth::check()) {
+                                ?>
+                                <a href="/myaccount">Paramètres du compte</a>
+                                <?php
+                            }
+                        ?>                       
                     </div>
                 </div>
             </div>
