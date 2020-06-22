@@ -157,9 +157,14 @@ body{
 
 } */
 
-main h1{
+main .title{
+    display: block;
     margin-top: 30px;
     text-align: center;
-    font-size: 80px;
-    color: var(--jaune-cesi);
+
+}
+
+main .title img{
+    height: 90px;
+    width: 340px;
 }
