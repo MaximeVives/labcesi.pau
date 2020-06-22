@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-title')
-Conditions générales de vente
+Conditions générales de vente - labcesi.pau.fr
 @endsection
 
 @section('content')
