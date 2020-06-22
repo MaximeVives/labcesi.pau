@@ -1,0 +1,28 @@
+main{
+    overflow: hidden;
+}
+
+.content{
+    margin: 50px;
+}
+
+.content p{
+    text-align: justify;    
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center .ancre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: var(--jaune-cesi) ;
+    color: var(--noir-cesi);
+    font-size: 18px;
+    border-radius: 5px
+}
