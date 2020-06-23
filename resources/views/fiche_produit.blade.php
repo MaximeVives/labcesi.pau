@@ -1,7 +1,7 @@
 @extends('layouts/base')
 
 @section('currentpage-css')
-    <link rel="stylesheet" href="../css/fiche_prod.css">
+    <link rel="stylesheet" href="css/fiche_prod.css">
     <script lang="javascript" src="https://code.jquery.com/jquery-3.5.1.js"
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 crossorigin="anonymous"></script>
@@ -31,9 +31,12 @@ Cette page vous fait découvrir la création CESI : {{ $data_produit->name_produ
             </div>
             <div class="prod-fiche-descr">
                 <p>{{ $data_produit->description}}</p><br><br>
-                <p>Ce produit est fait en {{ $data_produit->ID_material }}</p>
+                @foreach ($data_material as $material)
+                <p>Ce produit est fait en {{ $material->name_material }}.</p>
+                @endforeach
+                
             </div>
-            <form action="post">
+            <form method="post" action="">
 
                 {{-- Pour la couleur et la quantité il faudra faire une autre requete SQL
                     Afin d'avoir la table couleur/qty en fonction de l'id produit
@@ -44,9 +47,9 @@ Cette page vous fait découvrir la création CESI : {{ $data_produit->name_produ
                     <div class="prod-fiche-list-color">
                         <select id="color-select" class="color" name="color-select">
                             <option id="default_size" value="0" disabled selected>Couleur :</option>
-                            <option value="rouge">Rouge</option>
-                            <option value="vert">Vert</option>
-                            <option value="bleu">Bleu</option>
+                            @foreach ($data_color as $color)
+                                <option value="{{ $color->name_color }}">{{ $color->name_color }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="prod-fiche-list-quantity">
