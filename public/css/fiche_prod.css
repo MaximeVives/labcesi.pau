@@ -22,7 +22,7 @@
 
 /* Texte à droite */
 .prod-fiche-right{
-    margin: auto;
+    margin: auto 100px;
 }
 
 /* Nom Produit */
