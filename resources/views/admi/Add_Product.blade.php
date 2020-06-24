@@ -15,6 +15,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header titre">{{ __('Ajouter un produit') }}</div>
+                    <div class="card-body">
 
                     <form method="POST" action="/envoie" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -23,8 +24,8 @@
                             <label for="name_product" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Nom du produit') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name_product" type="text" value="{{ old('name_product') }}" name="name_product" required>
-
+                                <input id="name_product" type="text" value="{{ old('name_product') }}" name="name_product"required>
+                            
                             </div>
                         </div>
 
@@ -51,13 +52,13 @@
 
                             <div class="col-md-6">
                                 <input id="image" type="file" name="image" required>
-
+                                
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4 center-bouton">
-                            <button type="submit" class="btn btn-primary"> {{ __('Ajout d un produit') }}</button>
+                            <button type="submit" class="btn btn-primary"> {{ __('Ajout d un produit') }}</button>     
                             </div>
                         </div>
                     </form>

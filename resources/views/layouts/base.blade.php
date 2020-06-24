@@ -8,6 +8,7 @@
 
     <title>@yield('title')</title>
 
+    <link rel="shortcut icon" href="image/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     @yield('currentpage-css')
 

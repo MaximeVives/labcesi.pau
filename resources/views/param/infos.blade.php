@@ -68,7 +68,7 @@ Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière ces
         
             <div class="field">
                 <div class="control">
-                    <p class="center-bouton"><button class="button is-link" type="submit">Modifier mon mot de passe</button></p>
+                    <p class="center-bouton"><button class="button is-link" type="submit">Modifier mes informations</button></p>
                 </div>
             </div>
         </form>

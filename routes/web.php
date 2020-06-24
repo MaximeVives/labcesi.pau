@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,17 @@ Route::get('/perso-data', 'accountController@exportData')->middleware('checkAuth
 
 Route::get('/mes-commandes', 'accountController@commandes')->middleware('checkAuth');
 Route::get('/fin-cookies', 'accountController@cookies')->middleware('checkAuth');
+
+
+Route::get('/envoie', 'admiController@store');
+Route::post('/envoie', 'admiController@store');
+
+Route::get('/delete', 'admiController@delete');
+Route::post('/delete', 'admiController@delete');
+
+Route::get('/update', 'admiController@update');
+Route::post('/update', 'admiController@update');
+
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');

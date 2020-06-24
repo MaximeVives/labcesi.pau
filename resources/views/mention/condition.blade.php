@@ -24,14 +24,14 @@
   <p>Merci de lire attentivement les présentes modalités d'utilisation du présent site avant de le parcourir. En vous connectant sur ce site, vous acceptez sans réserve les présentes modalités.</p>
   <br/><br/><h3>Editeur du site</h3><br/>
   <div>
-    <p><a  href="http://localhost/"><span>Site Solidarity</span></a><br/>par <a  href="http://localhost/">Carré Charles, Peio Despessailles,Tanguy Pulvirenti et Maxime Vives </a><br/>Résultats de recherche
+    <p><a  href="http://localhost/"><span>Site Solidarity</span></a><br/>par <a  href="http://localhost/">Carré Charles, Peio Despessailles,Tanguy Pulvirenti et Maxime Vives </a><br/>Adresse:
 8 Rue des Frères Charles et Alcide d' Orbigny, <br/>64000 Pau<br/><span>France</span><br/><span><span>Tél. : </span>05 59 32 57 62</span><br/><a class="org url"  title="Nouvelle fenetre" href="https://www.site-internet-qualite.fr/" target="_blank">http://localhost/</a>
   </div>
   <br/><br/><h3>Conditions d'utilisation</h3><br/>
   Le site accessible par les url suivants : http://localhost/est exploité dans le respect de la législation française. L'utilisation de ce site est régie par les présentes conditions générales. En utilisant le site, vous reconnaissez avoir pris connaissance de ces conditions et les avoir acceptées. Celles-ci pourront êtres modifiées à tout moment et sans préavis par la société Fablab cesi .<br/>Fablab cesi  ne saurait être tenu pour responsable en aucune manière d 'une mauvaise utilisation du service.
   <br/><br/><h3>Responsables éditoriaux</h3><br/>
   <div>
-    <p>Carré Charles, Peio Despessailles,Tanguy Pulvirenti et Maxime Vives<br/>Résultats de recherche
+    <p>Carré Charles, Peio Despessailles,Tanguy Pulvirenti et Maxime Vives<br/>Adresse:
 8 Rue des Frères Charles et Alcide d' Orbigny,<br/>64000 Pau<br/><span>France</span><br/><span><span>Tél. : </span>05 59 32 57 62</span></p>
   </div>
   <br/><br/><h3>Limitation de responsabilité</h3><br/>
@@ -72,7 +72,7 @@
 <div class="text-center" id="haut">
 
   <a href="{{ url('#haut') }}">
-    <button type="button" class="btn btn-primary" style=" 
+    <button type="button" class="btn btn-primary" style="
     border: none;
     outline: none;
     height: 40%;
@@ -82,7 +82,7 @@
     font-size: 18px;
     margin: 20px 50% 0;
     border-radius: 5px">
-      Retourner en haut de la page 
+      Retourner en haut de la page
     </button>
   </a>
 

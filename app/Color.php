@@ -18,4 +18,6 @@ class Color extends Model
     protected $table = 'colors';
 
     protected $primaryKey = 'ID_color';
+
+    public $timestamps = false;
 }
