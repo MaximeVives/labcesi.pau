@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'mainController@home');
 Route::get('/products', 'mainController@products');
 Route::get('/sponsors', 'mainController@sponsors');
-
 Route::get('/condition', 'mentionController@mention');
 Route::get('/vente', 'mentionController@vente');
 Route::get('/{n}', 'mainController@fiche_tech')->where('n', '[1-9]');
@@ -44,9 +43,17 @@ Route::get('/mes-commandes', 'accountController@commandes')->middleware('checkAu
 Route::get('/fin-cookies', 'accountController@cookies')->middleware('checkAuth');
 
 Route::get('/ajout_produit', 'admiController@ajout_Produit');
-Route::post('/ajout_produit', 'ProductController@store');
+Route::post('/ajout_produit', 'admiController@store');
 
-Route::post('/envoie', 'ProductController@store');
+Route::get('/envoie', 'admiController@store');
+Route::post('/envoie', 'admiController@store');
+
+Route::get('/delete', 'admiController@delete');
+Route::post('/delete', 'admiController@delete');
+
+Route::get('/update', 'admiController@update');
+Route::post('/update', 'admiController@update');
+
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
