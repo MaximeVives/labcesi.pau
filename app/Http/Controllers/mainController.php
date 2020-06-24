@@ -10,7 +10,12 @@ use App\Material;
 class mainController extends Controller
 {
     public function home(){return view('home');}
-    public function products(){return view('products');}
+
+    public function products(){
+        $produits = Product::all();
+        return view('products', array('data_produit' => $produits));
+    }
+
     public function sponsors(){return view('sponsors');}
 
     // Fiche technique par produit -> URL dynamique
