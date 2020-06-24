@@ -8,7 +8,7 @@
 <!doctype html>
 <head>
 <body>
-<div class="registerbox">
+<div class="box">
 
 <div class="container">
     <div class="row justify-content-center">
@@ -16,66 +16,48 @@
             <div class="card">
                 <div class="card-header titre">{{ __('Ajouter un produit') }}</div>
 
-                <div class="card-body">
-                
-                    <form method="POST" action="/envoie" onsubmit="return verifForm(this,'add')">
-                    {{ csrf_field() }}
+                    <form method="POST" action="/envoie" enctype="multipart/form-data">
+                        {{ csrf_field() }}
 
                         <div class="form-group row">
-                            <label for="name_product" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('nom du produit') }}</label>
+                            <label for="name_product" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Nom du produit') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name_product" type="text" value="{{ old('name_product') }}" name="name_product">
+                                <input id="name_product" type="text" value="{{ old('name_product') }}" name="name_product" required>
 
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="ID_color" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('couleur du produit') }}</label>
+                            <label for="quantity" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Quantité du produit') }}</label>
 
                             <div class="col-md-6">
-                                <input id="ID_color" type="text" value="{{ old('ID_color') }}" name="ID_color" >
-
-                            </div>
-                        </div>
-                    
-                        <div class="form-group row">
-                            <label for="quantity" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('quantity') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="quantity" type="text" value="{{ old('quantity') }}" name="quantity" >
+                                <input id="quantity" type="text" value="{{ old('quantity') }}" name="quantity" required>
 
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Description') }}</label>
+                            <label for="description" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Description du produit') }}</label>
 
                             <div class="col-md-6">
-                                <input id="description" type="text" value="{{ old('description') }}"  name="description" >
+                                <input id="description" type="text" value="{{ old('description') }}"  name="description" required>
 
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="ID_material" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Matériau') }}</label>
+                            <label for="image" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Image du produit (Taille max : 2Mo)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="ID_material" type="text" value="{{ old('ID_material') }}" name="ID_material" >
-                            </div>
-                        </div>
+                                <input id="image" type="file" name="image" required>
 
-                        <div class="form-group row">
-                            <label for="url_pic" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('url de l image du produit') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="url_pic" type="file" value="{{ old('url_pic') }}"  name="url_pic" >
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4 center-bouton">
-                            <button type="submit" class="btn btn-primary"> {{ __('Ajout d un produit') }}</button>     
+                            <button type="submit" class="btn btn-primary"> {{ __('Ajout d un produit') }}</button>
                             </div>
                         </div>
                     </form>
