@@ -42,7 +42,7 @@ class admiController extends Controller
         $stock = public_path("storage\image");
         // dd($stock);
         // $path = $request->image->path();
-
+        
         $file->move($stock, $filename);
 
         $product = new Product;
@@ -54,7 +54,7 @@ class admiController extends Controller
         $product->save();
 
         return redirect('/admi')->with('add', "Produit ajouté");
-
+        
 
         // request()->validate([
         //     'ID_product' => ['required'],
@@ -69,7 +69,7 @@ class admiController extends Controller
         // $product->quantity = request('quantity');
         // $product->description = request('description');
         // $product->url_pic = request('url_pic');
-
+        
 
         // Storage::disk("public")->put('image/'.$product->url_pic, request('url_pic'));
         // Sauvegarder du nouveau produit
@@ -118,5 +118,5 @@ class admiController extends Controller
         // Renvoie vers la page d'adminstration
         return redirect('/admi')->with('suppr', "Produit supprimé");
     }
-
+    
 }
