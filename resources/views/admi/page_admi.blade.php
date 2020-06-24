@@ -102,8 +102,8 @@
                                     <form action="/delete"  method="POST">
                                     @csrf
                                         <input id="ID_product" type="text" class="form-control"value="{{ $produit->ID_product }}" style="display: none;" name="ID_product">
-                                    <button type="submit" class=".btn-suppr">
-                                    <img src="image/croix_rouge.png" class='croix' alt="bouton pour supprimer">
+                                        <button type="submit" class=".btn-suppr">
+                                            <img src="image/croix_rouge.png" class='croix' alt="bouton pour supprimer">
                                         </button>
                                     </form>
                                 </div>
