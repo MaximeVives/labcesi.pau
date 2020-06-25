@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 class LoginController extends Controller
 {
     /*
@@ -42,6 +44,7 @@ class LoginController extends Controller
     }
 
     public function logout(Request $request){
+        Cart::destroy();
         Auth::logout();
         return redirect('/');
     }

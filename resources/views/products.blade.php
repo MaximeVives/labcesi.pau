@@ -71,4 +71,10 @@ Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière ces
             </div> --}}
         </div>
     </div>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success')}}
+        </div>
+
+    @endif
 @endsection

@@ -1,0 +1,143 @@
+.content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin: 80px auto;
+    /* height: 300px; */
+}
+
+.content-cart{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    margin: 80px auto;
+    /* height: 300px; */
+}
+
+.content h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.attente-confirmation #conf{
+    color: var(--jaune-cesi);
+    text-transform: uppercase;
+    /* text-decoration: underline; */
+}
+
+
+/* ========================== */
+
+.attente-livraison #livr{
+    color: var(--jaune-cesi);
+    text-transform: uppercase;
+    /* text-decoration: underline; */
+}
+
+
+
+
+/* Style Tableau */
+.content-table{
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.content-table thead tr{
+    background-color: var(--jaune-cesi);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    color: var(--jaune-cesi);
+}
+
+/* .content-table tbody tr:hover th,
+.content-table tbody tr:nth-of-type(even):hover th,
+.content-table tbody tr:hover th .bouton,
+.content-table tbody tr:nth-of-type(even):hover th .bouton{
+    background-color: var(--noir-cesi);
+    color: var(--jaune-cesi);
+    font-weight: bold;
+} */
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid var(--jaune-cesi);
+}
+
+
+
+.bouton{
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    margin: 0 15px;
+    padding: 5px;
+    border: 1px solid var(--jaune-cesi);
+    border-radius: 5px;
+    
+    transition: background .5s;
+    cursor: pointer;
+}
+
+.bouton:hover{
+    background-color: var(--jaune-cesi);
+    color: #fff;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button{
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+.fa-trash{
+    font-size: 20px;
+}
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1190px){
+    .content{
+        grid-template-columns: 100%;
+    }
+
+    .content-table{
+        margin: 25px auto 100px;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .content-table th,
+    .content-table td{
+        padding: 3px 4px;
+    }
+}

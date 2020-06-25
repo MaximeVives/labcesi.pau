@@ -18,4 +18,6 @@ class Material extends Model
     protected $table = 'materials';
 
     protected $primaryKey = 'ID_material';
+
+    public $timestamps = false;
 }

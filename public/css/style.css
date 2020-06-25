@@ -151,7 +151,10 @@ body{
     text-align: right;
     padding: 0 20px;
 }
+
 .cart i{font-size: 32px;}
+.cart a{text-decoration: none;}
+
 
 /* main{
 

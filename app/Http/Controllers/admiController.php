@@ -3,28 +3,83 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 
+use App\Http\Requests\ContactRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use Validator;
 use App\Product;
 use App\Color;
 use App\Material;
+use App\Order;
+
 
 class admiController extends Controller
 {
+
     public function admi()
+    {
+        return view('admi/adminboard');
+    }
+
+    public function modif_produit()
     {
             $produits = Product::all();
             $colors = Color::all();
             $materials = Material::all();
-            // Renvoie vers la page d'adminstration
-            return view('admi/page_admi', array('data_produit' => $produits, 'data_color' => $colors, 'data_material' => $materials));
+            // Renvoie vers la page d'adminstration      
+    
+            return view('admi/modif_produit', array('data_produit' => $produits, 'data_color' => $colors, 'data_material' => $materials));
     }
     public function ajout_Produit()
     {
         return view('admi/Add_Product');
     }
+
+    public function liste_commande()
+    {
+
+        //$order = Order::where("ID_user", Auth::user()->id); //Fonctionne pour un utilisateur qui veut voir ces commandes3
+        $order = Order::join('users', 'orders.ID_user', '=', 'users.id')
+                        ->join('products', 'orders.ID_product', '=', 'products.ID_product')
+                        ->join('colors', 'orders.ID_color', '=', 'colors.ID_color')
+                        ->orderBy('date_delivery', 'asc')
+                        ->get();
+        
+        return view('admi/liste_commande', array('data_order' => $order));
+    }
+
+
+    public function valOrder(Request $request)
+    {
+
+        $request->validate([
+            'ID_order' => ['required'],
+            'ID_user' => ['required'],
+            'ID_product' => ['required'],
+            'color' => ['required'],
+            'qty' => ['required'],
+            'date_delivery' => ['required'],
+        ]);
+
+        // #TODO : Rajouter l'email de l'utilisateur pour envoie de mail
+
+        $delivery = Order::find(request('ID_order'));
+
+        $delivery->ID_product = request('ID_product');
+        $delivery->ID_color = request('color');
+        $delivery->quantity = request('qty');
+        $delivery->date_delivery = request('date_delivery');
+
+        $delivery->save();
+        
+
+        // Mail::to(request('email'))->send(new validOrderMail()); 
+        return redirect('/liste-commande')->with('validate', "Commande confirmée");
+    }
+
+
     public function store(Request $request)
     {
     // $file = $request->file('image');

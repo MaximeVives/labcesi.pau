@@ -84,7 +84,7 @@
             else{
                 ?>
             <div class="cart">
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="{{ route('cart.index') }}"><i class="fas fa-shopping-cart"></i>{{ Cart::count() }}</a>
             </div>
             <div class="connected"> 
                 <p>Bonjour <span class="name_connected"><?php echo(Auth::user()->firstname);?></span></p>

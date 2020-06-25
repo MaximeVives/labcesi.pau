@@ -11,5 +11,11 @@ class Product extends Model
      *
      * @var string
      */
+    protected $fillable = [
+        'name_product', 'ID_color', 'quantity', 'description', 'ID_material', 'url_pic'
+    ];
+
     protected $primaryKey = 'ID_product';
+
+    public $timestamps = false;
 }
