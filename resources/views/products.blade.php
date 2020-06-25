@@ -39,36 +39,12 @@ Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière ces
             </div>
             @endforeach
 
-            {{-- <div class="product-grid">
-                <div class="product-image">
-                    <a href="">
-                        <img src="#" alt="1">
-                        <img src="#" alt="2">
-                    </a>
-                    <span class="product-trend-label">
-                    </span>
-                </div>
-            </div>
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="">
-                        <img src="#" alt="1">
-                        <img src="#" alt="2">
-                    </a>
-                    <span class="product-trend-label">
-                    </span>
-                </div>
-            </div>
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="">
-                        <img src="#" alt="1">
-                        <img src="#" alt="2">
-                    </a>
-                    <span class="product-trend-label">
-                    </span>
-                </div>
-            </div> --}}
         </div>
     </div>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success')}}
+        </div>
+
+    @endif
 @endsection

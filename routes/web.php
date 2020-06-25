@@ -15,18 +15,21 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', 'mainController@home');
-Route::get('/products', 'mainController@products');
+Route::get('/products', 'mainController@products')->name('productPage');
 Route::get('/sponsors', 'mainController@sponsors');
 Route::get('/condition', 'mentionController@mention');
 Route::get('/vente', 'mentionController@vente');
-Route::get('/{n}', 'mainController@fiche_tech')->where('n', '[1-9]');
+
+
+
+
 
 Route::get('/admi', 'admiController@admi')->middleware('checkAdmin');
+Route::post('/admi', 'admiController@admi')->middleware('checkAdmin');
 
 Route::get('/ajout_produit', 'admiController@ajout_Produit')->middleware('checkAdmin');
 Route::post('/ajout_produit', 'ProductController@store')->middleware('checkAdmin');
 
-Route::post('/envoie', 'ProductController@store')->middleware('checkAdmin');
 
 
 // Paramètres de compte
@@ -44,15 +47,52 @@ Route::get('/mes-commandes', 'accountController@commandes')->middleware('checkAu
 Route::get('/fin-cookies', 'accountController@cookies')->middleware('checkAuth');
 
 
-Route::get('/envoie', 'admiController@store');
-Route::post('/envoie', 'admiController@store');
 
-Route::get('/delete', 'admiController@delete');
-Route::post('/delete', 'admiController@delete');
+// ADMINISTRATION
 
-Route::get('/update', 'admiController@update');
-Route::post('/update', 'admiController@update');
+// Accueil
+Route::get('/admi', 'admiController@admi')->middleware('checkAdmin');
+
+// Accès aux pages depuis le board
+Route::get('/ajout_produit', 'admiController@ajout_Produit')->middleware('checkAdmin');
+Route::get('/modif', 'admiController@modif_produit')->middleware('checkAdmin');
+// Route::post('/modif', 'admiController@modif_produit')->middleware('checkAdmin');
+Route::get('/liste-commande', 'admiController@liste_commande')->middleware('checkAdmin');
+
+
+// Ajout produit
+Route::get('/envoie', 'admiController@store')->middleware('checkAdmin');
+Route::post('/envoie', 'admiController@store')->middleware('checkAdmin');
+
+// Supprimer produit
+Route::get('/delete', 'admiController@delete')->middleware('checkAdmin');
+Route::post('/delete', 'admiController@delete')->middleware('checkAdmin');
+
+// Modifier produit
+Route::get('/update', 'admiController@update')->middleware('checkAdmin');
+Route::post('/update', 'admiController@update')->middleware('checkAdmin');
 
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+
+
+// PANIER
+// Routes pour le fonctionnement du Panier
+Route::get('/panier', 'CartController@index')->name('cart.index');
+Route::post('/panier/ajouter', 'CartController@store')->name('cart.store');
+Route::get('/panier/vider', function () {
+    Cart::destroy();
+});
+Route::delete('/panier/{rowId}', 'CartController@destroy')->name('cart.destroy');
+Route::post('/commande', 'OrderController@store')->name('order.add');
+
+
+//FROM order TO delivery
+Route::post('/transform-delivery', 'admiController@valOrder');
+
+
+
+//A METTRE A LA FIN A CAUSE DU WHERE
+Route::get('/{n}', 'mainController@fiche_tech')->where('n', '.+');

@@ -32,7 +32,8 @@
     display: inline-block;
     position: relative;
     top: -5%;
-    left: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
     margin: 0 auto;
 
     background-color: var(--jaune-cesi);
