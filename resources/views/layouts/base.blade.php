@@ -52,7 +52,7 @@
                         <a href="#">Crédits</a>
                     </div>
                     <div class="right-part">
-                        <a href="#">Cesi</a>
+                        <a href="https://pau.cesi.fr/" target="_blank">Cesi</a>
                         <?php 
                             if (Auth::check()) {
                                 ?>

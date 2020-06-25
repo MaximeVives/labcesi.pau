@@ -44,7 +44,7 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
                                     <div class="p-2">
                                         <img src="storage/image/{{ $product->model->url_pic }}" alt="" width="70" class="img-fluid rounded shadow-sm">
                                         <div class="ml-3 d-inline-block align-middle">
-                                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">{{ $product->name }}</a></h5>
+                                        <h5 class="mb-0"> <a href="/{{ $product->model->ID_product }}" class="text-dark d-inline-block">{{ $product->name }}</a></h5>
                                         </div>
                                     </div>
                                     <th><strong>{{ $product->options->color}}</strong></th>
@@ -74,7 +74,7 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="bouton"><i class="fa fa-trash"></i></a>
-                                            </form>
+                                        </form>
                                     </th>
                                 </tr>
                                 @endforeach

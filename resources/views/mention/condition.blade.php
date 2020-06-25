@@ -8,6 +8,10 @@
     Condition d'utilisation - labcesi.pau.fr
 @endsection
 
+@section('currentpage-css')
+<link rel="stylesheet" href="css/condition.css">
+@endsection
+
 @section('content')
 
 </br>
@@ -75,8 +79,7 @@
     <button type="button" class="btn btn-primary" style="
     border: none;
     outline: none;
-    height: 40%;
-    width: 15%;
+    width: 50%;
     background-color: var(--jaune-cesi) ;
     color: var(--noir-cesi);
     font-size: 18px;

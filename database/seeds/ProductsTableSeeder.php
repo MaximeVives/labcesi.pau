@@ -14,16 +14,16 @@ class ProductsTableSeeder extends Seeder
         
         Product::create([
             'name_product' => 'Visière CESI',
-            'description' => 'Une visière créé par le Fablab.',
-            'url_pic' => 'visiere-cesi.png',
+            'description' => 'Une visière créée par le Fablab. Cette visière permet une protection contre les postillons. La taille est unique.',
+            'url_pic' => 'visiere2.jpg',
             'quantity' => '1'
         ]);
 
         Product::create([
             'name_product' => 'Stylet CESI',
-            'description' => 'Un stylet créé par le Fablab',
-            'url_pic' => 'stylet-cesi.png',
-            'quantity' => '10'
+            'description' => 'Un stylet créé par le Fablab. Ce stylet permet à celui qui l\'utilise de ne pas être en contact direct avec des boutons type terminal de paiment ou ascenseur. La taille est unique.',
+            'url_pic' => 'visiere3.png',
+            'quantity' => '1'
         ]);
     }
 }

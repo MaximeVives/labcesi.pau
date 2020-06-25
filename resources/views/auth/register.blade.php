@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<!doctype html>
-<head>
-<body>
+
 <div class="registerbox">
     <img src="image/user.png" class="avatar">
 
@@ -11,14 +9,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header titre">{{ __('Register') }}</div>
+                <div class="card-header titre">{{ __('Inscription') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="firstname" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Prenom') }}</label>
+                            <label for="firstname" class="col-md-4 col-form-label text-md-right sous-partie">{{ __('Prénom') }}</label>
 
                             <div class="col-md-6">
                                 <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" placeholder="Entrer votre prénom" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname"  autofocus>
@@ -104,7 +102,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4 center-bouton">
                                 <button type="submit" class="btn btn-primary bouton">
-                                    {{ __('Register') }}
+                                    {{ __('S\'inscrire') }}
                                 </button>
                             </div>
                         </div>
@@ -115,6 +113,4 @@
     </div>
 </div>
 </div>
-</boby>
-</html>
 @endsection

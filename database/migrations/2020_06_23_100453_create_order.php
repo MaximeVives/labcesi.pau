@@ -13,12 +13,13 @@ class CreateOrder extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table){
             $table->id('ID_order');
             $table->integer('ID_user');
             $table->integer('ID_product');
             $table->integer('ID_color');
-            $table->integer('ID_material');
+            $table->integer('quantity_order');
+            $table->date('date_delivery')->nullable();
         });
     }
 

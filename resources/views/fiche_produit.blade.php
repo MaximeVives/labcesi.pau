@@ -61,6 +61,7 @@ Cette page vous fait découvrir la création CESI :. Nous espérons que ca vous 
                         </select>
                     </div>
                 </div>
+                <div class="price">Tous nos produits sont GRATUITS</div>
                 <div class="prod-fiche-addcart">
                     <form action="{{ route('cart.store') }}" method="POST" onsubmit="return verifForm(this)">
                         @csrf
@@ -69,7 +70,7 @@ Cette page vous fait découvrir la création CESI :. Nous espérons que ca vous 
                         <input type="hidden" name="color" class="color" value="">
                         <input type="hidden" name="material" value="{{ $material->name_material }}">
                         <input type="hidden" name="qty" class="qty" value="">
-                        <input type="submit" value="Ajouter au panier">
+                        <button type="submit">Ajouter au panier</button>
                     </form>
                 </div>
             </div>
