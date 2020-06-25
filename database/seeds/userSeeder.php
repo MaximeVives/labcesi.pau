@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\nomModel;
+use App\User;
 
 class userSeeder extends Seeder
 {
@@ -12,6 +12,14 @@ class userSeeder extends Seeder
      */
     public function run()
     {
-        //
+        User::create([
+            'firstname'=>'Maxime',
+            'lastname'=>'Vives',
+            'email'=>'hastagmaxime@gmail.com',
+            'password'=> Hash::make('hwtd83dj'),
+            'ID_type'=>'1',
+            'admin'=>'1',
+        ]);
+
     }
 }

@@ -54,37 +54,11 @@
 
 }
 
-.dot-stock{
-    margin-right: 5px;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.green-dot{
-    background-color: green;
-    color: green;
-    box-shadow: 0 0 3px green, 0 0 6px green, 0 0 12px green;
-}
-
-.orange-dot{
-    background-color: orange;
-    color: orange;
-    box-shadow: 0 0 3px orange, 0 0 6px orange, 0 0 12px orange;
-}
-
-.red-dot{
-    background-color: red;
-    color: red;
-    box-shadow: 0 0 3px red, 0 0 6px red, 0 0 12px red;
-}
-
 
 /* <a> comme un bouton */
 .discover{
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 15px 30px;
     border: 1px solid var(--jaune-cesi);
     border-radius: 5px;
     transition: .6s;

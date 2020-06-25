@@ -1,63 +1,7 @@
 :root{
-    --size: 300px;
+    --size: 350px;
 }
 
-/* .intro{
-    margin: 50px 0 50px 30px;
-    font-size: 20px;
-} */
-
-/* .lab{
-    color: var(--jaune-cesi);
-    text-shadow: black;
-}
-
-.lab-descr{
-    margin: 30px 0;
-    max-height: var(--size);
-    display: grid;
-    grid-template-rows: 50% 50%;
-} */
-
-/* .noir{background-color: rgba(39, 37, 31, 0.2);}
-.noir .word-descr-right h3, .noir .word-descr-right p{color: var(--noir-cesi);}
-
-.jaune{background-color: rgba(255, 200, 69, 0.2);}
-.jaune .word-descr-right h3, .jaune .word-descr-right p{color: var(--noir-cesi);} */
-
-
-/* .word-descr{
-    display: grid;
-    grid-template-rows: 50% 50%;
-    height: 100%;
-}
-
-
-.word-descr h3{
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.word-descr p{
-    font-size: 20px;
-    text-align: justify;
-}
-
-.word-descr-left, .word-descr-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 10px;
-    min-height: var(--size);
-}
-
-./*word-descr-left img, .word-descr-right img{
-    margin: auto;
-    max-height: var(--size);
-    max-width: 100%;
-} */
 
 .intro{
     margin: 50px 0 50px 30px;
@@ -93,8 +37,8 @@
 
 }
 
+.imaginer{background-image: url("../image/fablab/CESI_SO_92_5.jpg");}
 .collaborer{background-image: url("../image/fablab/CESI_SO_75.jpg");}
-.imaginer{background-image: url("../image/fablab/CESI_SO_28.jpg");}
 .experimenter{background-image: url("../image/fablab/CESI_SO_30.jpg");}
 
 .lab-descr h3{

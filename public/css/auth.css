@@ -1,5 +1,6 @@
 .registerbox{
     width: 30%;
+    max-width: 400px;
     background: var(--noir-cesi);
     color: #fff;
     top: 50%;

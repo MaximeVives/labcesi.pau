@@ -1,8 +1,8 @@
 /* Conteneur fiche technique */
 .prod-content{
-    width: 100%;
-    height: calc(100vh - 60px);
-
+    /* width: 100%;
+    height: calc(100vh - 60px); */
+    margin: 100px 0;
     display: grid;
     grid-template-columns: 30% 70%;
 }
@@ -43,7 +43,7 @@
 }
 
 .prod-fiche-descr p{
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -84,6 +84,13 @@ select option {
 }
 
 
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0;
+}
+
 /* Bouton design */
 .prod-fiche-addcart{
     display: flex;
@@ -91,7 +98,7 @@ select option {
     margin: 50px 0 0;
 }
 
-input[type="submit"]{
+button{
     background-color: transparent;
     color: var(--noir-cesi);
     width: 240px;
@@ -103,11 +110,11 @@ input[type="submit"]{
     overflow: hidden;
 }
 
-input[type="submit"]:focus{
+button:focus{
     outline: none;
 }
 
-input[type="submit"]:hover{
+button:hover{
     background: var(--jaune-cesi);
     cursor: pointer;
 }

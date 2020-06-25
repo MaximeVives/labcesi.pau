@@ -4,6 +4,10 @@
     labcesi.pau.fr
 @endsection
 
+@section('currentpage-css')
+<link rel="stylesheet" href="css/condition.css">
+@endsection
+
 @section('page-title')
 Conditions générales de vente - labcesi.pau.fr
 @endsection
