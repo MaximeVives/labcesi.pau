@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 
 use App\User;
+use App\Order;
 
 class accountController extends Controller
 {
@@ -15,8 +16,22 @@ class accountController extends Controller
 
     public function infos(){return view('param/infos');}
     public function donnees(){return view('param/donnees');}
-    public function commandes(){return view('param/commandes');}
+
     public function cookies(){return view('param/cookies');}
+
+
+
+
+    public function commandes(){
+        $order = Order::join('users', 'orders.ID_user', '=', 'users.id')
+                        ->join('products', 'orders.ID_product', '=', 'products.ID_product')
+                        ->join('colors', 'orders.ID_color', '=', 'colors.ID_color')
+                        ->orderBy('date_delivery', 'asc')
+                        ->orderBy('ID_order', 'asc')
+                        ->where("ID_user", auth()->user()->id) //Fonctionne pour un utilisateur qui veut voir ces commandes3
+                        ->get();
+        return view('param/commandes', array('data_order' => $order));
+    }
 
     public function Upinfos()
     {

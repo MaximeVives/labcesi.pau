@@ -5,10 +5,8 @@
 @endsection
 
 @section('content')
-<!doctype html>
-<head>
-<body>
-<div class="box">
+
+<div class="box add">
 
 <div class="container">
     <div class="row justify-content-center">
@@ -68,6 +66,5 @@
     </div>
 </div>
 </div>
-</boby>
-</html>
+
 @endsection

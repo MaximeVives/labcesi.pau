@@ -8,4 +8,6 @@ class Order extends Model
 {
     protected $primaryKey = 'ID_order';
     public $timestamps = false;
+
+    
 }

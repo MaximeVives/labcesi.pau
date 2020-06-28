@@ -35,29 +35,31 @@ Un problème avec votre compte Labcesi ? Vous pouvez venir modifier tout vos par
                 <tbody>
                     @foreach ($data_order as $order)
                     {{-- {{ dd($order) }} --}}
-                    @if (empty($order->date_delivery))
-                    <tr>
-                        <th>{{ $order->lastname }}</th>
-                        <th>{{ $order->firstname }}</th>
-                        <th>{{ $order->name_product }}</th>
-                        <th>{{ $order->name_color }}</th>
-                        <th>{{ $order->quantity_order }}</th>
-                        <th>
-                            <form action="/transform-delivery" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <input type="hidden" name="ID_order" value="{{ $order->ID_order }}">
-                                <input type="hidden" name="ID_user" value="{{ $order->ID_user }}">
-                                <input type="hidden" name="ID_product" value="{{ $order->ID_product }}">
-                                <input type="hidden" name="color" value="{{ $order->ID_color }}">
-                                <input type="hidden" name="qty" class="qty" value="{{ $order->quantity_order }}">
-                                <input type="date" id="start" name="date_delivery"
-                                {{-- value="" --}}
-                                min="2018-01-01" max="2090-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
-                                <button type="submit" class="bouton">Valider la commande</button>
-                            </form>
-                        </th>
-                    </tr>
-                    @endif
+                        @if (empty($order->date_delivery))
+                        <tr>
+                            <th>{{ $order->lastname }}</th>
+                            <th>{{ $order->firstname }}</th>
+                            <th>{{ $order->name_product }}</th>
+                            <th>{{ $order->name_color }}</th>
+                            <th>{{ $order->quantity_order }}</th>
+                            <th>
+                                <form action="/transform-delivery" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="ID_order" value="{{ $order->ID_order }}">
+                                    <input type="hidden" name="ID_user" value="{{ $order->ID_user }}">
+                                    <input type="hidden" name="emailUser" value="{{ $order->email }}">
+                                    <input type="hidden" name="ID_product" value="{{ $order->ID_product }}">
+                                    <input type="hidden" name="color" value="{{ $order->ID_color }}">
+                                    <input type="hidden" name="qty" class="qty" value="{{ $order->quantity_order }}">
+                                    
+                                    <input type="date" id="start" name="date_delivery"
+                                    {{-- value="" --}}
+                                    min="2018-01-01" max="2090-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+                                    <button type="submit" class="bouton">Valider la commande</button>
+                                </form>
+                            </th>
+                        </tr>
+                        @endif
                     @endforeach
                 </tbody>
             </table>
@@ -80,14 +82,22 @@ Un problème avec votre compte Labcesi ? Vous pouvez venir modifier tout vos par
                 <tbody>
                     @foreach ($data_order as $order)
                     {{-- {{ dd($order) }} --}}
-                        @if (!(empty($order->date_delivery)))
+                        @if ((!(empty($order->date_delivery))) && (!($order->isDelivered)))
                         <tr>
                             <th>{{ $order->lastname }}</th>
                             <th>{{ $order->firstname }}</th>
                             <th>{{ $order->name_product }}</th>
                             <th>{{ $order->name_color }}</th>
                             <th>{{ $order->quantity_order }}</th>
-                            <th>{{ $order->date_delivery }}</th>
+                            <th>{{ $order->date_delivery }}
+                                <form action="/delivery-down" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="ID_order" value="{{ $order->ID_order }}">
+                                    <input type="hidden" name="ID_product" value="{{ $order->ID_product }}">
+                                    <span>Commande livrée ?</span>
+                                    <button type="submit" class="bouton"><i class="fas fa-check"></i></button>
+                                </form>
+                            </th>
                         </tr>
                         @endif
                     @endforeach
@@ -102,4 +112,10 @@ Un problème avec votre compte Labcesi ? Vous pouvez venir modifier tout vos par
             alert("La commande a été validée");
         </script>
     @endif
+
+    @if(session()->has('delivered'))
+    <script lang="javascript">
+        alert("La commande a été livrée");
+    </script>
+@endif
 @endsection

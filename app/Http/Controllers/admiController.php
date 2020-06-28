@@ -5,14 +5,17 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\TestMail;
 
 use Illuminate\Http\Request;
 use Validator;
+
+use App\Mail\validOrderMail;
+
 use App\Product;
 use App\Color;
 use App\Material;
 use App\Order;
+use App\User;
 
 
 class admiController extends Controller
@@ -45,7 +48,10 @@ class admiController extends Controller
                         ->join('products', 'orders.ID_product', '=', 'products.ID_product')
                         ->join('colors', 'orders.ID_color', '=', 'colors.ID_color')
                         ->orderBy('date_delivery', 'asc')
+                        ->orderBy('ID_order', 'asc')
+                        // ->latest()
                         ->get();
+        // dd($order);
         
         return view('admi/liste_commande', array('data_order' => $order));
     }
@@ -65,18 +71,46 @@ class admiController extends Controller
 
         // #TODO : Rajouter l'email de l'utilisateur pour envoie de mail
 
-        $delivery = Order::find(request('ID_order'));
+        $product=Product::find(request('ID_product'));
+        $color=Color::find(request('color'));
+        $order=Order::find(request('ID_order'));
+        $mail=request('emailUser');
+        // dd($mail);
 
-        $delivery->ID_product = request('ID_product');
-        $delivery->ID_color = request('color');
-        $delivery->quantity = request('qty');
-        $delivery->date_delivery = request('date_delivery');
+        $order->ID_product = request('ID_product');
+        $order->ID_color = request('color');
+        $order->quantity_order = request('qty');
+        $order->date_delivery = request('date_delivery');
 
-        $delivery->save();
+        $order->save();
         
 
-        // Mail::to(request('email'))->send(new validOrderMail()); 
+        Mail::to($mail)->send(new validOrderMail($order,$product,$color));
         return redirect('/liste-commande')->with('validate', "Commande confirmée");
+    }
+
+
+    public function valDelivery(Request $request)
+    {
+
+        $request->validate([
+            'ID_order' => ['required'],
+            'ID_product' => ['required'],
+        ]);
+
+        // #TODO : Rajouter l'email de l'utilisateur pour envoie de mail
+
+        $order=Order::find(request('ID_order'));
+        // dd($mail);
+
+        $order->ID_product = request('ID_product');
+        $order->isDelivered = 1;
+   
+        $order->save();
+        
+
+        // Mail::to($mail)->send(new validOrderMail($order,$product,$color));
+        return redirect('/liste-commande')->with('delivered', "Commande livrée");
     }
 
 

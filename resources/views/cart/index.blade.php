@@ -3,6 +3,9 @@
 @section('currentpage-css')
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/liste-commande.css">
+    <script lang="javascript" src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 @endsection
 
 @section('meta-description')
@@ -28,7 +31,7 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
                 
                             <!-- Shopping cart table -->
                             <div class="table-responsive">
-                            <table class="table content-table">
+                            <table class="table content-table cart-table">
                                 <thead>
                                 <tr>
                                     <th scope="col" class="border-0 bg-light">Produit</th>
@@ -49,8 +52,9 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
                                     </div>
                                     <th><strong>{{ $product->options->color}}</strong></th>
                                     <th>
-                                        <select name="qty" id="qty" class="custom-select">
+                                        <select name="quantity_MAJ" id="qty" class="custom-select qty" data-id="{{ $product->model->ID_product }}">
                                             <?php 
+
                                             if (Auth::user()->ID_type == 1) { 
                                                 $max = 5;
                                             }
@@ -88,6 +92,10 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
                         <form class="btn" action="{{ route('order.add') }}" method="POST">
                             @csrf
                             {{-- <div class="row py-5 p-4 bg-white rounded shadow-sm"> --}}
+                                {{-- <input type="hidden" name="quantity_MAJ" class="qty" value="{{$product->qty}}"> --}}
+                                @foreach (Cart::content() as $count)
+                                    <input type="hidden" name="quantity_MAJ_{{$count->model->ID_product}}" class="qty {{$count->model->ID_product}}" value="{{$count->qty}}">
+                                @endforeach
                                 <button type="submit" class="bouton">Confirmer la commande</button>
                             {{-- </div> --}}
                         </form>
@@ -98,10 +106,22 @@ Sur cette page, vous retrouverez tous les produits ajoutés au panier.
             <p>Votre panier est vide.</p>
         @endif
     </div>
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success')}}
-        </div>
-    @endif
+
+    <script> 
+        $(document).ready(function(){
+                    $("select.qty").change(function(){
+                        var selectedQty = $(this).children("option:selected").val();
+                        var id = $(this).attr("data-id");
+        
+
+                        console.log($("form.btn").children("input."+id));
+                        $("form.btn").children("input."+id).val(selectedQty);
+                        // $("form.btn").children("input."+id).val(selectedQty);
+                        // $("form.btn").children("input.qty").css("background-color", "#ff0000");
+                        // console.log($("form.btn").children("input.qty"));
+                        // console.log($("input.qty").value());
+                    });
+                });
+        </script>
 
 @endsection

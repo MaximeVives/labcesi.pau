@@ -40,7 +40,11 @@ Cette page vous fait découvrir la création CESI :. Nous espérons que ca vous 
                 {{-- Pour la couleur et la quantité il faudra faire une autre requete SQL
                     Afin d'avoir la table couleur/qty en fonction de l'id produit
                     Ce qui est plus simple que de récupérer la couleur/qty depuis produit --}}
-
+                <?php
+                    if (Auth::check()) {
+                        ?>
+                      
+                
                 <div class="prod-fiche-detail">
                     <div class="prod-fiche-list-color">
                         <select id="color-select" class="color" name="color-select" required>
@@ -51,13 +55,23 @@ Cette page vous fait découvrir la création CESI :. Nous espérons que ca vous 
                         </select>
                     </div>
                     <div class="prod-fiche-list-quantity">
-                        <select id="quantity-select" class="qty" name="quantity-select" required>
+                        <select name="quantity-select" id="quantity-select" class=" qty custom-select" required>
+                            <?php 
+
+                            if (Auth::user()->ID_type == 1) { 
+                                $max = 5;
+                            }
+                            elseif (Auth::user()->ID_type == 2) { 
+                                $max = 10;
+                            }
+                            else 
+                            {
+                                $max = 20;
+                            }?>
                             <option id="default_qty" value="0" disabled selected>Quantité :</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            @for ($i = 1 ; $i <= $max; $i++)
+                                <option value="{{ $i }}">{{ $i}}</option>
+                            @endfor
                         </select>
                     </div>
                 </div>
@@ -76,6 +90,9 @@ Cette page vous fait découvrir la création CESI :. Nous espérons que ca vous 
             </div>
         </div>
     </div>
+    <?php
+                    }
+                    ?>
 
 
     <script>
