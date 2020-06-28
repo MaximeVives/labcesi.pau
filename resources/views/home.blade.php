@@ -22,7 +22,7 @@ Labcesi permet aux entreprises, aux particuliers ou encore aux personnels soigna
 
 @section('content')
 
-<p class="intro">En quelques mots, le <span class="lab">LabCesi</span> c'est : </p>
+<p class="intro">Bienvenue, en quelques mots, le <span class="lab">LabCesi</span> c'est : </p>
 
     
 
@@ -60,7 +60,8 @@ Labcesi permet aux entreprises, aux particuliers ou encore aux personnels soigna
             </div>
         </div>
     </div>
-    <p>Un lieu de création, d'inovation et de développement pour les étudiants dans le cadre scolaire mais aussi dans leurs projets extra scolaires</p>
+    <p class="promo-product"><span class="lab">LabCesi</span> est solidaire, grâce à nos fablab manager le labcesi vient en aide aux commerçants locaux en proposant des produits permettant la distanciation sociale.</p>
+    <p class="link-product">Venez découvrir <button class="bouton"><a href="/products">Nos produits</a></button> dès à présent</p>
     
 
     <script>

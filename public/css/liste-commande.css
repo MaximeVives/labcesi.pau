@@ -1,6 +1,16 @@
+/* POur l'administration */
 .content{
     display: grid;
     grid-template-columns: 50% 50%;
+    width: 100%;
+    margin: 80px auto;
+    /* height: 300px; */
+}
+
+/* Pour un utilisateur */
+.content-solo{
+    display: grid;
+    grid-template-columns: 100%;
     width: 100%;
     margin: 80px auto;
     /* height: 300px; */
@@ -15,6 +25,11 @@
 }
 
 .content h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.content-solo h3{
     text-align: center;
     font-size: 25px;
 }
@@ -58,7 +73,24 @@
 .content-table th,
 .content-table td{
     padding: 12px 15px;
+    min-width: 100px;
+
 }
+
+
+
+/* Specifique au panier */
+.cart-table th,
+.cart-table td{
+    font-size: 20px;
+    min-width: 250px;
+}
+.cart-table th strong{font-size: 18px;}
+.cart-table i{font-size: 30px;}
+
+
+
+
 
 .content-table tbody tr{
     border-bottom: 1px solid #ddd;
@@ -82,6 +114,16 @@
     border-bottom: 2px solid var(--jaune-cesi);
 }
 
+#qty{
+    border: none;
+    outline: none;
+    background-color: var(--jaune-cesi);
+    padding: 5px;
+    border: 1px solid var(--jaune-cesi);
+    color: var(--noir-cesi);
+    border-radius: 5px;
+    font-size: 18px;
+}
 
 
 .bouton{
@@ -112,14 +154,14 @@
 .btn button{
     margin-top: 50px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
-
+/* 
 .fa-trash{
     font-size: 20px;
-}
+} */
 
 
 

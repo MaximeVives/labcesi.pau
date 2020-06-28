@@ -20,25 +20,23 @@ Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière ces
     <div class="container">
         <div class="row">
             @foreach ($data_produit as $produit)
-            <div class="product-grid">
-                <div class="product-image" style="background-image: url('storage/image/{{ $produit->url_pic }}')">
-                    <div class="name-product">
-                        <h4>{{ $produit->name_product }}</h4>
+                <div class="product-grid">
+                    <div class="product-image" style="background-image: url('storage/image/{{ $produit->url_pic }}')">
+                        <div class="name-product">
+                            <h4>{{ $produit->name_product }}</h4>
+                        </div>
+                    </div>
+                    <div class="link-prod">
+                        <a class="discover" href="/{{ $produit->ID_product }}">Découvrir</a>
+
                     </div>
                 </div>
-                <div class="link-prod">
-                    <a class="discover" href="/{{ $produit->ID_product }}">Découvrir</a>
-
-                </div>
-            </div>
             @endforeach
-
         </div>
     </div>
     @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success')}}
-        </div>
-
+        <script lang="javascript">
+            alert("Votre produit a été ajouté au panier");
+        </script>
     @endif
 @endsection

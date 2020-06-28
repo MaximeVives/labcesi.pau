@@ -20,6 +20,7 @@ class CreateOrder extends Migration
             $table->integer('ID_color');
             $table->integer('quantity_order');
             $table->date('date_delivery')->nullable();
+            $table->boolean('isDelivered');
         });
     }
 

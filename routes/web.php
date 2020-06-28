@@ -80,17 +80,18 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 // PANIER
 // Routes pour le fonctionnement du Panier
-Route::get('/panier', 'CartController@index')->name('cart.index');
-Route::post('/panier/ajouter', 'CartController@store')->name('cart.store');
+Route::get('/panier', 'CartController@index')->name('cart.index')->middleware('checkAuth');
+Route::post('/panier/ajouter', 'CartController@store')->name('cart.store')->middleware('checkAuth');
 Route::get('/panier/vider', function () {
     Cart::destroy();
-});
-Route::delete('/panier/{rowId}', 'CartController@destroy')->name('cart.destroy');
-Route::post('/commande', 'OrderController@store')->name('order.add');
+})->middleware('checkAuth');
+Route::delete('/panier/{rowId}', 'CartController@destroy')->name('cart.destroy')->middleware('checkAuth');
+Route::post('/commande', 'OrderController@store')->name('order.add')->middleware('checkAuth');
 
 
 //FROM order TO delivery
-Route::post('/transform-delivery', 'admiController@valOrder');
+Route::post('/transform-delivery', 'admiController@valOrder')->middleware('checkAdmin');
+Route::post('/delivery-down', 'admiController@valDelivery')->middleware('checkAdmin');
 
 
 

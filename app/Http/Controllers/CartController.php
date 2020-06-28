@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
+
 use App\Product;
 use App\Color;
 
@@ -43,7 +44,7 @@ class CartController extends Controller
         ->associate('App\Product');
         
 
-        return redirect()->route('productPage')->with('success', 'Le produit a bien été ajouté.');
+        return redirect()->route('productPage');
     }
 
     /**

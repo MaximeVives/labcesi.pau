@@ -1,3 +1,4 @@
+/* Box modif produit */
 .box{
     width: 60%;
     background: var(--noir-cesi);
@@ -5,6 +6,11 @@
     padding: 0 1%;
     border-radius: 5px;
     margin: 50px auto;
+}
+
+/* Box add produit */
+.add{
+    width: 30%;
 }
 
 .content{
