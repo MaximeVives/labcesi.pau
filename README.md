@@ -80,13 +80,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Installation
 
-    1. Télécharger PHP et COMPOSER
-    2. Créer un nouveau projet Laravel (composer create-project --prefer-dist laravel/laravel nomDuProjet )
-    3. Laravel UI (composer require laravel/ui  puis  php artisan ui vue --auth)
-    4. Installation des dépendances (npm install && npm run dev)
-    5. Installation du module pour le panier (composer require bumbummen99/shoppingcart)
-    6. Lien symbolique entre storage et public (php artisan storage:link)
-    7. Migration des données (php artisan migrate  puis  php artisan db:seed)
-    8. Optimiser les fonctions php (composer dump-autoload)
-    9. Vider le cache (php artisan cache:clear)
-    10. Lancer l'application (php artisan serve) => le lien du projet [http://localhost:8000/](<http://localhost:8000/>)
+1. Télécharger PHP et COMPOSER
+2. Créer un nouveau projet Laravel (composer create-project --prefer-dist laravel/laravel nomDuProjet )
+3. Laravel UI (composer require laravel/ui  puis  php artisan ui vue --auth)
+4. Installation des dépendances (npm install && npm run dev)
+5. Installation du module pour le panier (composer require bumbummen99/shoppingcart)
+6. Lien symbolique entre storage et public (php artisan storage:link)
+7. Migration des données (php artisan migrate  puis  php artisan db:seed)
+8. Optimiser les fonctions php (composer dump-autoload)
+9. Vider le cache (php artisan cache:clear)
+10. Lancer l'application (php artisan serve) => le lien du projet [http://localhost:8000/](<http://localhost:8000/>)
