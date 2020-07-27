@@ -27,9 +27,9 @@ Un problème avec votre compte Labcesi ? Vous pouvez venir modifier tout vos par
         <div class="content-param" id="historique-commandes">
             <div class="encart"><a href="/liste-commande">Commandes en attente</a></div>
         </div>
-        {{-- <div class="content-param" id="stop-cookies">
-            <div class="encart"><a href="/">Commandes à valider</a></div>
-        </div> --}}
+        <div class="content-param" id="calendrier-reservation">
+            <div class="encart"><a href="/calendrier-reservation">Calendrier des reservations</a></div>
+        </div>
     </div>
 
     

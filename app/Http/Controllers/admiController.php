@@ -16,6 +16,8 @@ use App\Color;
 use App\Material;
 use App\Order;
 use App\User;
+use App\Reservation;
+use App\Outil;
 
 
 class admiController extends Controller
@@ -69,8 +71,6 @@ class admiController extends Controller
             'date_delivery' => ['required'],
         ]);
 
-        // #TODO : Rajouter l'email de l'utilisateur pour envoie de mail
-
         $product=Product::find(request('ID_product'));
         $color=Color::find(request('color'));
         $order=Order::find(request('ID_order'));
@@ -98,7 +98,6 @@ class admiController extends Controller
             'ID_product' => ['required'],
         ]);
 
-        // #TODO : Rajouter l'email de l'utilisateur pour envoie de mail
 
         $order=Order::find(request('ID_order'));
         // dd($mail);
@@ -209,3 +208,7 @@ class admiController extends Controller
     }
     
 }
+
+
+
+

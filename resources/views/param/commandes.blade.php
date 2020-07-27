@@ -65,7 +65,7 @@ Sur cette page, vous retrouverez tous les produits Lab'cesi de Pau. Visière ces
             <tbody>
                 @foreach ($data_order as $order)
                 {{-- {{ dd($order) }} --}}
-                    @if (!(empty($order->date_delivery)))
+                    @if ((!(empty($order->date_delivery))) && (!($order->isDelivered)))
                     <tr>
                         <th>{{ $order->name_product }}</th>
                         <th>{{ $order->name_color }}</th>

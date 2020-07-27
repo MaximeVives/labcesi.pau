@@ -59,6 +59,12 @@ Route::get('/modif', 'admiController@modif_produit')->middleware('checkAdmin');
 // Route::post('/modif', 'admiController@modif_produit')->middleware('checkAdmin');
 Route::get('/liste-commande', 'admiController@liste_commande')->middleware('checkAdmin');
 
+Route::get('/calendrier-reservation', 'calendarController@calendrier_reservation')->middleware('checkAdmin');
+Route::post('/addEvent', 'calendarController@add_event')->middleware('checkAdmin');
+// Route::get('/upEvent', 'calendarController@up_event')->middleware('checkAdmin');
+Route::post('/upEvent', 'calendarController@up_event')->middleware('checkAdmin');
+Route::get('/calendar/{n}', 'calendarController@fiche_event')->where('n', '.+'); //#TODO Fiche event
+
 
 // Ajout produit
 Route::get('/envoie', 'admiController@store')->middleware('checkAdmin');
