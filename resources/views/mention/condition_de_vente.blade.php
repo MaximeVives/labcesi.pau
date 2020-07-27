@@ -117,7 +117,7 @@ Conditions générales de vente - labcesi.pau.fr
     border: none;
     outline: none;
     height: 40%;
-    width: 15%;
+    width: 200px;
     background-color: var(--jaune-cesi) ;
     color: var(--noir-cesi);
     font-size: 18px;

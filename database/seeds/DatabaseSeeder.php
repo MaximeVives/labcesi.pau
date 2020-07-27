@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             ProductsTableSeeder::class,
             colorSeeder::class,
             materialSeeder::class,
+            outilsSeeder::class,
         ]);
     }
 }

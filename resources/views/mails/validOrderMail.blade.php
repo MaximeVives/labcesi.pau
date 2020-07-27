@@ -6,7 +6,7 @@ Le Lab'Cesi de Pau vous remercie d'avoir passé la commande, vous retrouverez ci
 @component('mail::table',['order'=> $order,'product'=>$product,'color'=>$color])
 | nom du produit              | Couleur                | quantité             | date de livraison  | lieu de livraison                                          |
 |:---------------------------:|:----------------------:|:--------------------:|:------------------:|:----------------------------------------------------------:|
-| {{ $product->name_product }}|{{ $color->name_color }}|{{ $order->quantity }}|{{$order->date_delivery}}|8 Rue des Frères Charles et Alcide d'Orbigny, 64000 Pau|
+| {{ $product->name_product }}|{{ $color->name_color }}|{{ $order->quantity_order }}|{{$order->date_delivery}}|8 Rue des Frères Charles et Alcide d'Orbigny, 64000 Pau|
 @endcomponent
 
 Merci pour votre commande,

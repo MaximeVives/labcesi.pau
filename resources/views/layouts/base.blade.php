@@ -13,6 +13,9 @@
     @yield('currentpage-css')
 
     <script src="https://kit.fontawesome.com/fb3e250c04.js" crossorigin="anonymous"></script>
+    <script lang="javascript" src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <header>

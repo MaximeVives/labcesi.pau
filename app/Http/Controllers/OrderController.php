@@ -7,11 +7,13 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\validCartMail;
+use App\Mail\validCartMailAdmin;
+use App\Mail\validCartMailUser;
 
 
 
 use App\Product;
+use App\User;
 use App\Color;
 use App\Order;
 use Auth;
@@ -60,6 +62,7 @@ class OrderController extends Controller
             $user = Auth::user();
             $produit = Product::find($product->id);
 
+
             $order = new Order;
             $order->ID_product = $product->id;
             $order->ID_color = $c;
@@ -68,7 +71,8 @@ class OrderController extends Controller
             $order->isDelivered = 0;
 
             // dd($order->quantity);
-            Mail::to(Auth::user()->email)->send(new validCartMail($order, $produit, $user, $color));
+            Mail::to("maarnaud@cesi.fr")->send(new validCartMailAdmin($order, $produit, $user, $color));
+            Mail::to(Auth::user()->email)->send(new validCartMailUser($order, $produit, $user, $color));
 
         //    #TODO : Décrémenter les stocks
 

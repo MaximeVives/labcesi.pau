@@ -1,0 +1,28 @@
+:root{
+    --fc-button-bg-color: rgb(255, 200, 69);
+    --fc-button-border-color: rgb(255, 200, 69);
+    --fc-button-active-bg-color: rgb(39, 37, 31);
+    --fc-button-hover-bg-color: rgb(39, 37, 31)
+}
+
+h2{
+    text-transform: capitalize;
+}
+
+
+.fc-toolbar-chunk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.fc .fc-timegrid-body {
+    min-height: 0!important;
+}
+
+#calendar{
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 50px;
+}

@@ -11,9 +11,9 @@ class Material extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'name_material', 'ID_product'
-    ];
+    // protected $fillable = [
+    //     'name_material'
+    // ];
 
     protected $table = 'materials';
 

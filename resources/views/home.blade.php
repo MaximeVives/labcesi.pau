@@ -6,10 +6,7 @@ Labcesi permet aux entreprises, aux particuliers ou encore aux personnels soigna
 
 @section('currentpage-css')
     <link rel="stylesheet" href="css/home.css">
-    <script lang="javascript" src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous">
-    </script>
+
 @endsection
 
 @section('title')
