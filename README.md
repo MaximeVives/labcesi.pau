@@ -89,4 +89,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     7. Migration des données (php artisan migrate  puis  php artisan db:seed)
     8. Optimiser les fonctions php (composer dump-autoload)
     9. Vider le cache (php artisan cache:clear)
-    10. Lancer l'application (php artisan serve) => le lien du projet [http://localhost:8000/](http://localhost:8000/)
+    10. Lancer l'application (php artisan serve) => le lien du projet .[http://localhost:8000/].(http://localhost:8000/)
